@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary" (click)="gosave()">
+    <ion-title>
+      谷歌地图从入门到放弃
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label floating>选择地址</ion-label>
+        <ion-input id="txtHome" type="text" [(ngModel)]="contact"></ion-input>
+    </ion-item>
+    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+</ion-content>
